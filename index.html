@@ -1,40 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Defensa de tesis - Carlos GR</title>
+    <title>Tesis Carlos GR</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <header id="slide-header"></header>
+      <div class="slides">
+        <section data-external="capitulos/portada/portada.html"></section>
+        <section data-external="capitulos/intro/intro.html"></section>
+        <section data-external="capitulos/catlc/catlc.html"></section>
+        <section data-external="capitulos/humanloop/humanloop.html"></section>
+        <section data-external="capitulos/timeseries/timeseries.html"></section>
+        <section
+          data-external="capitulos/conclusions/conclusions.html"
+        ></section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        slideNumber: "c/t",
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        dependencies: [
+          {
+            src: "plugin/external/external.js",
+            condition: function () {
+              return !!document.querySelector(
+                "[data-external],[data-external-replace]"
+              );
+            },
+          },
+        ],
+      });
+      Reveal.addEventListener("slidechanged", function (event) {
+        var header = document.getElementById("slide-header");
+        var sectionName = event.currentSlide.getAttribute("data-section");
+        var subsectionName = event.currentSlide.getAttribute("data-subsection");
+        if (subsectionName) {
+          header.innerHTML =
+            sectionName +
+            " / " +
+            '<span class="subsection">' +
+            subsectionName +
+            "</span>";
+        } else {
+          header.innerHTML = sectionName;
+        }
+      });
+    </script>
+  </body>
 </html>
