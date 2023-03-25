@@ -1765,7 +1765,7 @@ $overlayHeaderPadding: 5px;
   background: none;
   text-shadow: none;
 }
-.reveal .roll span {
+.h .reveal .roll span {
   display: block;
   position: relative;
   padding: 0 2px;
@@ -1966,26 +1966,9 @@ $notesWidthPercent: 25%;
   position: absolute;
   top: 10px; /* adjust the top distance to your liking */
   left: 10px; /* adjust the right distance to your liking */
+  font-size: 2vw;
 }
 
 .subsection {
   color: #ff0000; /* Set the color to red */
-}
-
-.jordi,
-.oscar {
-  display: inline-block;
-  text-align: center;
-}
-
-.jordi {
-  margin-right: 20px;
-}
-
-.tutores {
-  margin-top: 50px;
-}
-
-.gris {
-  color: #777777;
 }
