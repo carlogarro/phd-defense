@@ -1966,9 +1966,16 @@ $notesWidthPercent: 25%;
   position: absolute;
   top: 10px; /* adjust the top distance to your liking */
   left: 10px; /* adjust the right distance to your liking */
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .subsection {
   color: #ff0000; /* Set the color to red */
+}
+
+.leaflet-container {
+  height: 400px;
+  width: 600px;
+  max-width: 100%;
+  max-height: 100%;
 }
