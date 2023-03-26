@@ -72,6 +72,14 @@
           header.innerHTML = sectionName;
         }
       });
+      Reveal.addEventListener("fragmentshown", function (event) {
+        var currentFragment = event.fragment.id;
+        if (currentFragment === "toBarcelona") {
+          var iframe = document.getElementById("catlc_iframe");
+          var myMap = iframe.contentWindow.myMap;
+          myMap.flyTo([41, -0.09]); // Llamar al método setView() de myMap
+        }
+      });
     </script>
   </body>
 </html>
