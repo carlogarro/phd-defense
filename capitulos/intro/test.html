@@ -18,12 +18,15 @@
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://unpkg.com/browse/whatwg-fetch@3.2.0/dist/fetch.umd.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="https://unpkg.com/georaster"></script>
-    <script src="https://unpkg.com/proj4"></script>
-    <script src="../georaster-layer-for-leaflet.min.js"></script>
+    <script src="https://unpkg.com/chroma-js"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
     <script>
+      var parse_georaster = require("georaster");
+
+      var GeoRasterLayer = require("georaster-layer-for-leaflet");
+
       // initalize leaflet map
       var map = L.map("map").setView([0, 0], 5);
 
@@ -44,17 +47,12 @@
             /*
           GeoRasterLayer is an extension of GridLayer,
           which means can use GridLayer options like opacity.
-
           Just make sure to include the georaster option!
-
           http://leafletjs.com/reference-1.2.0.html#gridlayer
       */
             var layer = new GeoRasterLayer({
               georaster: georaster,
               opacity: 0.7,
-              pixelValuesToColorFn: (values) =>
-                values[0] > 100 ? "#ff0000" : "#0000ff",
-              resolution: 64, // optional parameter for adjusting display resolution
             });
             layer.addTo(map);
 

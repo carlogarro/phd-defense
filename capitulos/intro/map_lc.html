@@ -49,8 +49,7 @@
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
-      var file =
-        "https://georaster-layer-for-leaflet.s3.amazonaws.com/Blue-Earth-Bathymetry-COG.tif";
+      var file = "./rasters/mcsctif1679769618860.tif";
       fetch(file)
         .then((response) => response.arrayBuffer())
         .then((arrayBuffer) => {
