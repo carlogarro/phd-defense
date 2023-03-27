@@ -75,14 +75,18 @@
       Reveal.addEventListener("fragmentshown", function (event) {
         var currentFragment = event.fragment.id;
         console.log(currentFragment);
-        if (currentFragment === "toCastellon") {
+        if (currentFragment === "toPantaFoix") {
           var iframe = document.getElementById("catlc_iframe");
           var myMap = iframe.contentWindow.myMap;
-          myMap.flyTo([39.9853493, -0.0368375]); // Llamar al método setView() de myMap
+          myMap.flyTo([41.2586, 1.6403], 15); // Llamar al método setView() de myMap
         } else if (currentFragment === "toBarcelona") {
           var iframe = document.getElementById("catlc_iframe");
           var myMap = iframe.contentWindow.myMap;
           myMap.flyTo([41.3832764, 2.1764434]); // Llamar al método setView() de myMap
+        } else if (currentFragment === "toVielha") {
+          var iframe = document.getElementById("catlc_iframe");
+          var myMap = iframe.contentWindow.myMap;
+          myMap.flyTo([42.7746, 0.9534]); // Llamar al método setView() de myMap
         }
       });
     </script>
