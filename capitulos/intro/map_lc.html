@@ -47,9 +47,10 @@
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
-      var url_to_geotiff_file = "/rasters/mcsctif1679769618860.tif";
 
-      fetch(url_to_geotiff_file, { mode: "cors" })
+      var file =
+        "https://georaster-layer-for-leaflet.s3.amazonaws.com/Blue-Earth-Bathymetry-COG.tif";
+      fetch(file)
         .then((response) => response.arrayBuffer())
         .then((arrayBuffer) => {
           parseGeoraster(arrayBuffer).then((georaster) => {
@@ -62,13 +63,10 @@
           http://leafletjs.com/reference-1.2.0.html#gridlayer
       */
             var layer = new GeoRasterLayer({
-              crossOrigin: true,
               georaster: georaster,
               opacity: 0.7,
             });
             layer.addTo(map);
-
-            map.fitBounds(layer.getBounds());
           });
         });
       window.myMap = map;
