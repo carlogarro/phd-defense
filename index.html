@@ -75,22 +75,26 @@
       Reveal.addEventListener("fragmentshown", function (event) {
         var currentFragment = event.fragment.id;
         console.log(currentFragment);
-        if (currentFragment === "toPantaFoix") {
+        function getMapFrame() {
           var iframe = document.getElementById("catlc_iframe");
           var myMap = iframe.contentWindow.myMap;
+          return myMap;
+        }
+        if (currentFragment === "toPantaFoix") {
+          var myMap = getMapFrame();
           myMap.flyTo([41.2586, 1.6403], 15); // Llamar al método setView() de myMap
         } else if (currentFragment === "toBarcelona") {
-          var iframe = document.getElementById("catlc_iframe");
-          var myMap = iframe.contentWindow.myMap;
+          var myMap = getMapFrame();
           myMap.flyTo([41.3832764, 2.1764434]); // Llamar al método setView() de myMap
         } else if (currentFragment === "toVielha") {
-          var iframe = document.getElementById("catlc_iframe");
-          var myMap = iframe.contentWindow.myMap;
+          var myMap = getMapFrame();
           myMap.flyTo([42.7746, 0.9534]); // Llamar al método setView() de myMap
         } else if (currentFragment === "toRipoll") {
-          var iframe = document.getElementById("catlc_iframe");
-          var myMap = iframe.contentWindow.myMap;
+          var myMap = getMapFrame();
           myMap.flyTo([42.177, 2.1943]); // Llamar al método setView() de myMap
+        } else if (currentFragment === "toBerga") {
+          var myMap = getMapFrame();
+          myMap.flyTo([42.088733, 1.852983], 18);
         }
       });
     </script>
