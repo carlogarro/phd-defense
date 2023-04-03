@@ -5,7 +5,54 @@
   </h2>
 </section>
 
-<section data-section="Human-in-the-loop">...</section>
+<section data-section="Human-in-the-loop">
+  <div style="display: flex">
+    <div style="height: 360px; width: 50%">
+      <canvas
+        data-chart="bar"
+        ,
+        data-chart-src="./capitulos/humanloop/charts/confidnet1.csv"
+        ,
+      >
+        <!-- 
+{
+"data" : {
+"datasets" : [{ "backgroundColor": "rgba(255, 159, 64, 0.7)" }, { "backgroundColor": "rgba(75, 192, 192, 0.7)" } ]
+},
+"options": {"barPercentage": 1.0,
+  "categoryPercentage": 1.0, "scales": { "x": { "stacked": true, "title":{"display":true, "text":"Confianza"} }, "y": { "stacked": false, "title":{"display":true, "text":"Densidad relativa"} } } }
+}
+-->
+      </canvas>
+      <p class="caption-text">Maximum class probability</p>
+    </div>
+    <div style="height: 360px; width: 50%">
+      <canvas
+        data-chart="bar"
+        ,
+        data-chart-src="./capitulos/humanloop/charts/confidnet2.csv"
+        ,
+      >
+        <!-- 
+{
+"data" : {
+"datasets" : [{ "backgroundColor": "rgba(255, 159, 64, 0.7)" }, { "backgroundColor": "rgba(75, 192, 192, 0.7)" } ]
+},
+"options": {"barPercentage": 1.0,
+  "categoryPercentage": 1.0, "scales": { "x": { "stacked": true, "title":{"display":true, "text":"Confianza"} }, "y": { "stacked": false, "title":{"display":true, "text":"Densidad relativa"} } } }
+}
+-->
+      </canvas>
+      <p class="caption-text">True class probability</p>
+    </div>
+  </div>
+  <br />
+  <p class="caption-text">
+    Corbière, C., Thome, N., Bar-Hen, A., Cord, M., & Pérez, P. (2019).
+    Addressing failure prediction by learning model confidence.
+    <em>Advances in Neural Information Processing Systems</em>, 32. Chicago
+  </p>
+</section>
 <section
   data-section="Human-in-the-loop"
   data-subsection="Metodologia propuesta"

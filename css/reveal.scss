@@ -1962,15 +1962,22 @@ $notesWidthPercent: 25%;
 /*********************************************
  * OTHER
  *********************************************/
+
 #slide-header {
   position: absolute;
-  top: 10px; /* adjust the top distance to your liking */
-  left: 10px; /* adjust the right distance to your liking */
-  font-size: 3vw;
+  top: 1rem; /* adjust the top distance to your liking */
+  left: 1rem; /* adjust the right distance to your liking */
+  font-size: 2rem;
 }
 
 .subsection {
-  color: #ff0000; /* Set the color to red */
+  color: rgb(105, 105, 105); /* Set the color to red */
+}
+
+.caption-text {
+  font-size: 0.5em;
+  margin: 0;
+  padding: 0;
 }
 
 /*********************************************
