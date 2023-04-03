@@ -98,16 +98,51 @@
 </section>
 <section></section>
 
-<section data-section="Map" class="stretch">
-  <iframe
-    id="catlc_iframe"
-    data-src="./capitulos/catlc/map_lc.html"
-    data-preload
-    style="height: 80%; width: 50%; margin-top: 100px"
-  ></iframe>
-  <div class="fragment" id="toPantaFoix">hola hola Foix</div>
-  <div class="fragment" id="toBarcelona">hola hola Bcn</div>
-  <div class="fragment" id="toVielha"></div>
-  <div class="fragment" id="toRipoll"></div>
-  <div class="fragment" id="toBerga"></div>
+<section data-section="Dataset Multi-resolución" data-subsection="Metodologia">
+  <div
+    style="
+      display: flex;
+      margin-top: 100px;
+      align-items: flex-start;
+      justify-content: space-between;
+    "
+    class="stretch"
+  >
+    <iframe
+      id="catlc_iframe"
+      data-src="./capitulos/catlc/map_lc.html"
+      data-preload
+      style="height: 80%; width: 60%; margin-top: 0px; max-height: 100%"
+    ></iframe>
+    <div class="r-stack">
+      <div class="fragment current-visible" id="toPantaFoix">
+        <h5>Ortofoto</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toBarcelona">
+        <h5>Sentinel-1</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toVielha">
+        <h5>Sentinel-2</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toRipoll">
+        <h5>Modelo digital de elevación</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toBerga">
+        <h5>Modelo digital de superfície</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toBerga">
+        <h5>Modelo de altura del dosel arbóreo</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+      <div class="fragment fade-in-then-out" id="toBerga">
+        <h5>Mapa de cubiertas</h5>
+        <p>Imagen aérea rectificada</p>
+      </div>
+    </div>
+  </div>
 </section>
