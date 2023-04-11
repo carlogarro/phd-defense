@@ -5,6 +5,7 @@
   </h2>
 </section>
 
+<!-- Pixel density paper -->
 <section data-section="Human-in-the-loop">
   <div style="display: flex">
     <div style="height: 360px; width: 50%">
@@ -53,6 +54,102 @@
     <em>Advances in Neural Information Processing Systems</em>, 32. Chicago
   </p>
 </section>
+
+<!-- Nuestro pixel density -->
+<section data-section="Human-in-the-loop">
+  <div style="display: flex">
+    <div style="height: 360px; width: 50%">
+      <canvas
+        data-chart="bar"
+        ,
+        data-chart-src="./capitulos/humanloop/charts/confidnet3.csv"
+        ,
+      >
+        <!-- 
+{
+"data" : {
+"datasets" : [{ "backgroundColor": "rgba(255, 159, 64, 0.7)" }, { "backgroundColor": "rgba(75, 192, 192, 0.7)" } ]
+},
+"options": {"barPercentage": 1.0,
+  "categoryPercentage": 1.0, "scales": { "x": { "stacked": true, "title":{"display":true, "text":"Confianza"} }, "y": { "stacked": false, "title":{"display":true, "text":"Densidad relativa"} } } }
+}
+-->
+      </canvas>
+      <p class="caption-text">Maximum class probability</p>
+    </div>
+    <div style="height: 360px; width: 50%">
+      <canvas
+        data-chart="bar"
+        ,
+        data-chart-src="./capitulos/humanloop/charts/confidnet4.csv"
+        ,
+      >
+        <!-- 
+{
+"data" : {
+"datasets" : [{ "backgroundColor": "rgba(255, 159, 64, 0.7)" }, { "backgroundColor": "rgba(75, 192, 192, 0.7)" } ]
+},
+"options": {"barPercentage": 1.0,
+  "categoryPercentage": 1.0, "scales": { "x": {"stacked": true, "title":{"display":true, "text":"Confianza"} }, "y": { "suggestedMax": 7, "stacked": false, "title":{"display":true, "text":"Densidad relativa"} } } }
+}
+-->
+      </canvas>
+      <p class="caption-text">True class probability</p>
+    </div>
+  </div>
+</section>
+
+<!-- Estado del arte -->
+<section data-section="Human-in-the-loop" data-subsection="Estado del arte">
+  <table>
+    <tr>
+      <th>Dataset</th>
+      <th style="text-align: center">Tamaño (px)</th>
+      <th style="text-align: center">Clases</th>
+      <th style="text-align: center">Precisión</th>
+    </tr>
+    <tr>
+      <td>Salinas Valley</td>
+      <td style="text-align: center">512 x 217 x 204</td>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">99.33</td>
+    </tr>
+    <tr>
+      <td>Pavia Centre</td>
+      <td style="text-align: center">1096 x 1096 x 102</td>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">99.61</td>
+    </tr>
+    <tr>
+      <td>Indian Pines</td>
+      <td style="text-align: center">145 x 145 x 204</td>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center">98.46</td>
+    </tr>
+  </table>
+  <div class="r-stack">
+    <img
+      class="fragment fade-in-then-out"
+      src="./capitulos/humanloop/images/salinas-completeh.png"
+      alt=""
+      style="height: 200px"
+    />
+    <img
+      class="fragment fade-in-then-out"
+      src="./capitulos/humanloop/images/pavia-completeh.png"
+      alt=""
+      style="height: 200px"
+    />
+    <img
+      class="fragment current-visible"
+      src="./capitulos/humanloop/images/indian-pines-completeh.png"
+      alt=""
+      style="height: 200px"
+    />
+  </div>
+</section>
+
+<!-- Metodologia -->
 <section
   data-section="Human-in-the-loop"
   data-subsection="Metodologia propuesta"
@@ -65,4 +162,8 @@
   data-subsection="Resultados experimentales"
 >
   ...
+</section>
+
+<section data-section="Human-in-the-loop">
+  <h4>Resumen</h4>
 </section>

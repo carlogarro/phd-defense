@@ -1,0 +1,19 @@
+{
+  "options": {
+    "animation": {
+      "duration": 2000
+    },
+    "barPercentage": 1.0,
+    "categoryPercentage": 1.0,
+    "scales": {
+      "x": {
+        "stacked": true,
+        "title": { "display": true, "text": "Confianza" }
+      },
+      "y": {
+        "stacked": false,
+        "title": { "display": true, "text": "Densidad relativa" }
+      }
+    }
+  }
+}
